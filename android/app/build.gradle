@@ -1,0 +1,139 @@
+plugins {
+id "com.android.application"
+id "kotlin-android"
+// The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+id "dev.flutter.flutter-gradle-plugin"
+id 'com.google.gms.google-services'
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file("key.properties")
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+} else {
+    println("Warning: key.properties file not found! Signing will not be configured.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+// def flutterRoot = localProperties.getProperty('flutter.sdk')
+
+// apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+// if (flutterRoot == null) {
+//     throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+// }
+
+// apply plugin: 'com.android.application'
+// apply plugin: 'kotlin-android'
+// apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    // compileSdkVersion 29
+    namespace 'id.co.berca.apps_mobile'
+    compileSdkVersion 36
+    // compileSdkVersion 31
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"  // Set the JVM target to 17
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "id.co.berca.apps_mobile"
+        minSdkVersion 28
+        // minSdkVersion 33
+        // targetSdkVersion 30
+        targetSdkVersion 33
+        // Update to v2 embedding
+        // ndkVersion rootProject.ext.ndkVersion
+        // ndk {
+        //     abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
+        // }
+        //  renderscriptTargetApi rootProject.ext.renderscriptTargetApi
+        // renderscriptSupportModeEnabled rootProject.ext.renderscriptSupportModeEnabled
+        // multiDexEnabled true
+        // testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+    }
+
+    // packagingOptions {
+    //     enableCoreLibraryDesugaring = true
+    // }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties["keyAlias"]
+            keyPassword keystoreProperties["keyPassword"]
+            storeFile file(keystoreProperties["storeFile"])
+            storePassword keystoreProperties["storePassword"]
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.release
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    
+        }
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+}
+
+allprojects {
+    repositories {
+        google()      // Repositori Google
+        mavenCentral()// Repositori Maven Central
+    }
+}

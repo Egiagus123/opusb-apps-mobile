@@ -1,0 +1,2 @@
+D:/OpusB/newopusb/opusb-apps-mobile/android/app/.cxx/Debug/6z1e532i/x86/CMakeFiles/edit_cache.dir
+D:/OpusB/newopusb/opusb-apps-mobile/android/app/.cxx/Debug/6z1e532i/x86/CMakeFiles/rebuild_cache.dir

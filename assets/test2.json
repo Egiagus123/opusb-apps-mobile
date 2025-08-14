@@ -1,0 +1,51 @@
+[
+  {
+    "id": "IB092",
+    "asset": "Excavator Mini 300.9D",
+    "serialno": "SN-1283",
+    "loc": "Site Papua",
+    "status": "Available"
+  },
+  {
+    "id": "IB093",
+    "asset": "Excavator Mini 302.7D CR",
+    "serialno": "SN-1285",
+    "loc": "Site Papua",
+    "status": "Available"
+  },
+  {
+    "id": "IB094",
+    "asset": "Excavator Mini 305.5E2 CR",
+    "serialno": "SN-1286",
+    "loc": "Site Papua",
+    "status": "Available"
+  },
+   {
+    "id": "IB0945",
+    "asset": "Wheel Excavator M315",
+    "serialno": "SN-1287",
+    "loc": "Site Papua",
+    "status": "Available"
+  },
+   {
+    "id": "IB096",
+    "asset": "Wheel Excavator M322D2",
+    "serialno": "SN-1288",
+    "loc": "Site Papua",
+    "status": "Available"
+  },
+  {
+    "id": "IB097",
+    "asset": "Excavator PC200-8",
+    "serialno": "SN-1289",
+    "loc": "Site Papua",
+    "status": "Available"
+  },
+  {
+    "id": "IB098",
+    "asset": "Excavator 318D2L (2017)",
+    "serialno": "SN-1290",
+    "loc": "Site Papua",
+    "status": "Available"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "950162351581",
+    "project_id": "test-758c7",
+    "storage_bucket": "test-758c7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950162351581:android:cc31f2bc06b7a56d6cc234",
+        "android_client_info": {
+          "package_name": "id.co.berca.apps_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950162351581-jhrc01achluoih33e6anedi8oa9uepgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.berca.apps_mobile",
+            "certificate_hash": "bd99df492f1eae2160d4f8697188d10afa47cb38"
+          }
+        },
+        {
+          "client_id": "950162351581-erqija0uktpnp3q9t2qn84r60sn2dohg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQkfa6hwGiWRBAxj4meZfwNuO6tINqOcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950162351581-erqija0uktpnp3q9t2qn84r60sn2dohg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

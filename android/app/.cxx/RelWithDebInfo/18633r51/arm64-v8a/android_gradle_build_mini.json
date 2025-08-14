@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "D:\\flutternew\\flutter_windows_3.29.3-stable\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\egi.nurdin.ROOT\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "D:\\OpusB\\newopusb\\opusb-apps-mobile\\android\\app\\.cxx\\RelWithDebInfo\\18633r51\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\egi.nurdin.ROOT\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "D:\\OpusB\\newopusb\\opusb-apps-mobile\\android\\app\\.cxx\\RelWithDebInfo\\18633r51\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
