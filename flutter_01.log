@@ -1,0 +1,98 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --quiet assemble --no-version-check --depfile D:\OpusB\newopusb\opusb-apps-mobile\build\app\intermediates\flutter\debug/flutter_build.d --output D:\OpusB\newopusb\opusb-apps-mobile\build\app\intermediates\flutter\debug -dTargetFile=D:\OpusB\newopusb\opusb-apps-mobile\lib\main.dart -dTargetPlatform=android -dBuildMode=debug -dTrackWidgetCreation=true -dFlavor= -dAndroidArchs=android-x64 -dMinSdkVersion=22 debug_android_application
+
+## exception
+
+PathAccessException: PathAccessException: Cannot open file, path = 'C:\Users\egi.nurdin.ROOT\AppData\Roaming\.flutter_tool_state' (OS Error: The process cannot access the file because it is being used by another process.
+, errno = 32)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:782:7)
+#1      _File.openSync (dart:io/file_impl.dart:575:5)
+#2      _File.writeAsBytesSync (dart:io/file_impl.dart:747:31)
+#3      _File.writeAsStringSync (dart:io/file_impl.dart:775:5)
+#4      ForwardingFile.writeAsStringSync (package:file/src/forwarding/forwarding_file.dart:150:16)
+#5      ErrorHandlingFile.writeAsStringSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:254:22)
+#6      _runSync (package:flutter_tools/src/base/error_handling_io.dart:550:14)
+#7      ErrorHandlingFile.writeAsStringSync (package:flutter_tools/src/base/error_handling_io.dart:253:5)
+#8      Config._flushValues (package:flutter_tools/src/base/config.dart:182:11)
+#9      Config.setValue (package:flutter_tools/src/base/config.dart:171:5)
+#10     _DefaultPersistentToolState.setIsRunningOnBot (package:flutter_tools/src/persistent_tool_state.dart:116:13)
+#11     BotDetector.isRunningOnBot (package:flutter_tools/src/base/bot_detector.dart:36:28)
+#12     FlutterCommandRunner._shouldCheckForUpdates (package:flutter_tools/src/runner/flutter_command_runner.dart:351:63)
+#13     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:450:19)
+#14     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:29)
+#15     _rootRun (dart:async/zone.dart:1525:13)
+#16     _CustomZone.run (dart:async/zone.dart:1422:19)
+#17     _runZoned (dart:async/zone.dart:2034:6)
+#18     runZoned (dart:async/zone.dart:1960:10)
+#19     AppContext.run (package:flutter_tools/src/base/context.dart:153:12)
+#20     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:431:19)
+<asynchronous suspension>
+#21     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:98:11)
+<asynchronous suspension>
+#22     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#23     main (package:flutter_tools/executable.dart:99:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.29.3, on Microsoft Windows [Version 10.0.26100.3775], locale en-ID) [1,693ms]
+    • Flutter version 3.29.3 on channel stable at D:\flutternew\flutter_windows_3.29.3-stable\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision ea121f8859 (3 weeks ago), 2025-04-11 19:10:07 +0000
+    • Engine revision cf56914b32
+    • Dart version 3.7.2
+    • DevTools version 2.42.3
+
+[✓] Windows Version (11 Pro 64-bit, 24H2, 2009) [8.5s]
+
+[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0) [5.5s]
+    • Android SDK at C:\Users\egi.nurdin.ROOT\AppData\Local\Android\sdk
+    • Platform android-35, build-tools 34.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-9586694)
+    ! Some Android licenses not accepted. To resolve this, run: flutter doctor --android-licenses
+
+[✓] Chrome - develop for the web [465ms]
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Visual Studio - develop Windows apps (Visual Studio Build Tools 2017 15.9.57) [463ms]
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools
+    • Visual Studio Build Tools 2017 version 15.9.34031.82
+    ✗ Visual Studio 2019 or later is required.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[✓] Android Studio (version 2022.2) [20ms]
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-9586694)
+
+[✓] VS Code (version 1.99.3) [18ms]
+    • VS Code at C:\Users\egi.nurdin.ROOT\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 2.21.1
+
+[✓] Connected device (4 available) [600ms]
+    • ONEPLUS A5000 (mobile) • localhost:64172 • android-x64    • Android 7.1.1 (API 25)
+    • Windows (desktop)      • windows         • windows-x64    • Microsoft Windows [Version 10.0.26100.3775]
+    • Chrome (web)           • chrome          • web-javascript • Google Chrome 135.0.7049.115
+    • Edge (web)             • edge            • web-javascript • Microsoft Edge 135.0.3179.98
+
+[✓] Network resources [836ms]
+    • All expected network resources are available.
+
+! Doctor found issues in 2 categories.
+```

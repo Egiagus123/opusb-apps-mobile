@@ -1,0 +1,207 @@
+name: apps_mobile
+description: A new Flutter project.
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core libraries
+  http: ^1.2.0
+  dio: ^5.4.0
+  get: ^4.6.6
+  get_it: ^7.6.0
+  equatable: ^2.0.5
+  logger: ^2.0.2
+
+  # Firebase
+  firebase_core: ^2.30.0
+  firebase_messaging: ^14.9.1
+
+  # Storage & Local Data
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  external_path: ^2.2.0
+  sqflite: ^2.3.2
+  path_provider: ^2.1.2
+  path: ^1.9.0
+  data_connection_checker_nulls: ^0.0.2
+  connectivity_plus: ^5.0.2
+
+  # UI libraries
+  adaptive_theme: ^3.2.0
+  # carousel_slider: ^4.2.1
+  charts_flutter_new: ^0.12.0
+  # intl: ^0.18.0 # Update to the latest version
+  fl_chart: ^0.65.0
+  flutter_slidable: ^3.1.0
+  flutter_svg: ^2.0.9
+  badges: ^3.1.2
+  grouped_list: ^5.1.2
+  shimmer_animation: ^2.1.0
+  syncfusion_flutter_charts: ^25.1.39
+  flutter_echarts: ^2.1.0
+  sizer: ^2.0.15
+
+  # State Management
+  flutter_bloc: ^8.1.3
+  states_rebuilder: ^6.2.0
+
+  # Notifications
+  # flutter_local_notifications: ^16.3.2
+  flutter_downloader: ^1.11.4
+
+  # File & PDF
+  open_filex: ^4.4.0
+  flutter_archive: ^5.0.0
+  archive: ^3.3.1
+  pdfx: ^2.3.0 # Ganti dari native_pdf_view (lebih baru dan aman)
+
+  # Scanner
+  # mobile_scanner: ^6.0.0
+  # flutter_barcode_scanner: ^2.0.0
+  qr_code_scanner: any
+
+  # Auth
+  local_auth: ^2.1.8
+  permission_handler: ^11.3.1
+  image_picker: ^1.0.7
+
+  # Utilities
+  json_annotation: ^4.8.1
+  version: ^3.0.2
+  timeago: ^3.6.0
+  url_launcher: ^6.2.5
+  lazy_load_scrollview: ^1.3.0
+  font_awesome_flutter: ^10.7.0
+  package_info_plus: ^8.3.0
+  date_field: ^3.0.0
+  pin_code_fields: ^8.0.1
+
+  # Icon Fonts
+  cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
+  date_format: ^2.0.9
+  flutter_screenutil: ^5.9.3
+  eva_icons_flutter: ^3.1.0
+  file_picker: ^8.0.7
+  csv: ^6.0.0
+  share_plus: ^10.0.0
+  google_sign_in: ^6.3.0
+  googleapis: ^14.0.0
+  flutter_jailbreak_detection: ^1.10.0
+  camera: ^0.10.5+5
+  google_mlkit_face_detection: ^0.8.0
+  flutter_image_compress: ^1.1.0
+
+
+dependency_overrides:
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
+  flutter_launcher_icons: ^0.13.1
+  change_app_package_name: ^1.1.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/fonts/Lato/
+    - assets/svg/
+    - assets/news/
+    - assets/scan.png
+    - assets/iconsmenu/
+    - assets/icon-filter.jpg
+    - assets/3d-box-light.png
+    - assets/short.png
+    - assets/stats.png
+    - assets/settingssliders.png
+    - assets/Logout.png
+    - assets/delivery1.png
+    - assets/Group7774.png
+    - assets/transfer1.png
+    - assets/shopping1.png
+    - assets/gps1.png
+    - assets/speedometer1.png
+    - assets/Group160.png
+    - assets/checklist1.png
+    - assets/receiver1.png
+    - assets/segitigacomponent.png
+    - assets/Icons/sorting.png
+    - assets/Icons/upload.png
+    - assets/kubus.jpeg
+    - assets/modem.jpg
+    - assets/package_search.png
+    - assets/watclist.jpeg
+    - assets/dashboard.png
+    - assets/cart-4.png
+    - assets/Ruler.png
+    - assets/Calculator.png
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Light.otf
+    - family: Oswald
+      fonts:
+        - asset: assets/fonts/Oswald-Medium.ttf
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
+        - asset: assets/fonts/Lato/Lato-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Hairline.ttf
+          weight: 100
+        - asset: assets/fonts/Lato/Lato-HairlineItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Thin.ttf
+          weight: 200
+        - asset: assets/fonts/Lato/Lato-ThinItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Lato/Lato-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Lato/Lato-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/Lato/Lato-SemiboldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Lato/Lato-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Heavy.ttf
+          weight: 800
+        - asset: assets/fonts/Lato/Lato-HeavyItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/Lato/Lato-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Lato/Lato-BlackItalic.ttf
+          weight: 900
+          style: italic
